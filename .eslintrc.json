@@ -1,6 +1,8 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -24,6 +26,7 @@
     "prettier"
   ],
   "rules": {
+    "camelcase": "off",
     "prettier/prettier": "error",
     "no-use-before-define": "off",
     "no-unused-expressions": "off",
