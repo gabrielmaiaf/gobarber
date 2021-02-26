@@ -35,7 +35,13 @@
       "src/components/**/*.tsx",
       "src/hooks/**/*.tsx",
       "!src/hooks/index.tsx"
-    ]
+    ],
+    "coverageReporters": ["json-summary"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && istanbul-badges-readme && git add 'README.md'"
+    }
   },
   "browserslist": {
     "production": [
@@ -69,6 +75,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^5.1.1",
+    "istanbul-badges-readme": "^1.2.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "prettier": "^2.1.2",
     "react-test-renderer": "^17.0.1",
